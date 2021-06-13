@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import qs from "qs";
 
 const RefreshingImage = (props) => {
   const imgUrl = props.imgUrl;

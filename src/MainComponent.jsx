@@ -10,12 +10,13 @@ const Component = (props) => {
   const [inputImgUrl, setInputImgUrl] = useState("");
 
   const handleKeyDown = (e) => {
-    if (e.key == "enter") {
-      const urlQueryParams = new new URLSearchParams()();
+    if (e.key == "Enter") {
+      const urlQueryParams = new URLSearchParams();
+      console.log(inputImgUrl);
       urlQueryParams.set("imgUrl", inputImgUrl);
-      props.location.history.push({
+      props.history.push({
         pathname: props.location.pathname,
-        search: urlQueryParams,
+        search: '?' + urlQueryParams.toString(),
       });
     }
   };
